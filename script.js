@@ -24,3 +24,18 @@ document.getElementById('login-btn').addEventListener('click', function(e){
           });
     }
 })
+// login system ends here
+document.getElementById('deposit-btn').addEventListener('click', function(){
+    const depositElement = document.getElementById('deposit').value;
+    const deposit = parseFloat(depositElement);
+    const depositAmount = document.getElementById('deposit-amount')
+    const totalDeposit = deposit + parseFloat(depositAmount.innerText);
+    depositAmount.innerText = totalDeposit
+    // get the total amount
+    const totalBalanceElement = document.getElementById('total-balances')
+    const totalBalance = parseFloat(totalBalanceElement.innerText)
+    const totalBalanceCalculate = totalBalance + totalDeposit
+    totalBalanceElement.innerText = totalBalanceCalculate
+    // withdraw method add
+    
+});

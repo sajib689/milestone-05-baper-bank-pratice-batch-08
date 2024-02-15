@@ -46,7 +46,7 @@
                     <div class="card w-96 bg-yellow-400 p-8 rounded-lg text-white">
                         <div class="card-body">
                             <h2 class="text-3xl">Deposit</h2>
-                            <p class="text-5xl font-medium">$00</p>
+                            <p class="text-5xl font-medium">$<span id="deposit-amount">00</span></p>
                         </div>
                     </div>
                     <!-- card 02 -->
@@ -60,7 +60,7 @@
                     <div class="card w-96 bg-blue-400 p-8 rounded-lg text-white">
                         <div class="card-body">
                             <h2 class="text-3xl">Balance</h2>
-                            <p class="text-5xl font-medium">$1240</p>
+                            <p class="text-5xl font-medium">$ <span id="total-balances">1240</span></p>
                         </div>
                     </div>
                 </div>
@@ -68,8 +68,8 @@
                 <div class="m-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                     <div class=" flex flex-col bg-violet-400 p-8 rounded-lg">
                         <h1 class="text-4xl text-white mb-4">Your Deposit</h1>
-                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-                        <button class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600 w-[100px]">Deposit</button>
+                        <input id="deposit" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <button id="deposit-btn" class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600 w-[100px]">Deposit</button>
     
                     </div>
                     <div class=" flex flex-col bg-amber-400 p-8 rounded-lg">
