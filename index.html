@@ -6,38 +6,84 @@
     <title>Baper Bank</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
     <!-- Login system -->
-        <section>
-            <div class="hero min-h-screen bg-blue-400 ">
+        <section class="bg-blue-200 min-h-screen">
+            <div id="login" class="hero min-h-screen">
                 <div class="hero-content w-[550px]">
-                  
                   <div class="card shrink-0 w-full shadow-2xl bg-base-100">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="email" class="input input-bordered" required />
+                        <input id="email" type="email" placeholder="email" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" class="input input-bordered" required />
+                        <input id="password" type="password" placeholder="password" class="input input-bordered" required />
                         <label class="label">
                           <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                       </div>
                       <div class="form-control mt-6">
-                        <button class="btn btn-success text-white">Login</button>
+                        <button id="login-btn" class="btn btn-success text-white">Login</button>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
+              <!-- bank process -->
+              <section id="bank-process" class="container hidden">
+                <h1 class="text-5xl text-center text-black">Functional <span class="text-orange-600">Baap-Er-Bank</span>!!!</h1>
+                <div class="m-[50px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                    <!-- card 01 -->
+                    <div class="card w-96 bg-yellow-400 p-8 rounded-lg text-white">
+                        <div class="card-body">
+                            <h2 class="text-3xl">Deposit</h2>
+                            <p class="text-5xl font-medium">$00</p>
+                        </div>
+                    </div>
+                    <!-- card 02 -->
+                    <div class="card w-96 bg-red-400 p-8 rounded-lg text-white">
+                        <div class="card-body">
+                            <h2 class="text-3xl">Withdraw</h2>
+                            <p class="text-5xl font-medium">$00</p>
+                        </div>
+                    </div>
+                    <!-- card 03 -->
+                    <div class="card w-96 bg-blue-400 p-8 rounded-lg text-white">
+                        <div class="card-body">
+                            <h2 class="text-3xl">Balance</h2>
+                            <p class="text-5xl font-medium">$1240</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- input filed -->
+                <div class="m-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                    <div class=" flex flex-col bg-violet-400 p-8 rounded-lg">
+                        <h1 class="text-4xl text-white mb-4">Your Deposit</h1>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <button class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600 w-[100px]">Deposit</button>
+    
+                    </div>
+                    <div class=" flex flex-col bg-amber-400 p-8 rounded-lg">
+                        <h1 class="text-4xl text-white mb-4">Your Withdraw</h1>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <button class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600 w-[100px]">Withdraw</button>
+    
+                    </div>
+                </div>
+            </section>
         </section>
     <!-- Login system end -->
+
+    <!-- links js -->
+    <script src="./script.js"></script>
 </body>
 </html>
