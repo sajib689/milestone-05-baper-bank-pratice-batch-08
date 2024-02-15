@@ -37,5 +37,14 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const totalBalanceCalculate = totalBalance + totalDeposit
     totalBalanceElement.innerText = totalBalanceCalculate
     // withdraw method add
-    
+
+});
+
+document.getElementById('withdraw').addEventListener('click',function(){
+    const withdrawElement = document.getElementById('withdraw-amount').value;
+    const withdraw = parseFloat( withdrawElement)
+    const totalBalanceElement = document.getElementById('total-balances')
+    const totalBalance = parseFloat(totalBalanceElement.innerText)
+    const afterWithdraw = totalBalance - withdraw
+    totalBalanceElement.innerText = afterWithdraw
 });
