@@ -36,14 +36,12 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const totalBalance = parseFloat(totalBalanceElement.innerText)
     const totalBalanceCalculate = totalBalance + totalDeposit
     totalBalanceElement.innerText = totalBalanceCalculate
-    // withdraw method add
-
+    document.getElementById('deposit').value = ''
 });
-
+// withdraw method add
 document.getElementById('withdraw').addEventListener('click',function(){
     const withdrawElement = document.getElementById('withdraw-amount').value;
     const withdraw = parseFloat( withdrawElement)
-    console.log( withdraw)
     const totalBalanceElement = document.getElementById('total-balances')
     const totalBalance = parseFloat(totalBalanceElement.innerText)
     const afterWithdraw = totalBalance - withdraw
@@ -52,4 +50,5 @@ document.getElementById('withdraw').addEventListener('click',function(){
     const withdrawTable = parseFloat(withdrawTableElement.innerText)
     const totalWithdraw = withdraw + withdrawTable
     withdrawTableElement.innerText = totalWithdraw
+    document.getElementById('withdraw-amount').value = ''
 });
