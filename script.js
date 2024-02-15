@@ -43,8 +43,13 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
 document.getElementById('withdraw').addEventListener('click',function(){
     const withdrawElement = document.getElementById('withdraw-amount').value;
     const withdraw = parseFloat( withdrawElement)
+    console.log( withdraw)
     const totalBalanceElement = document.getElementById('total-balances')
     const totalBalance = parseFloat(totalBalanceElement.innerText)
     const afterWithdraw = totalBalance - withdraw
     totalBalanceElement.innerText = afterWithdraw
+    const withdrawTableElement = document.getElementById('withdraw-table')
+    const withdrawTable = parseFloat(withdrawTableElement.innerText)
+    const totalWithdraw = withdraw + withdrawTable
+    withdrawTableElement.innerText = totalWithdraw
 });
